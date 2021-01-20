@@ -1,1 +1,886 @@
-{"_type":"export","__export_format":4,"__export_date":"2021-01-20T20:54:43.212Z","__export_source":"insomnia.desktop.app:v2020.5.2","resources":[{"_id":"req_ef511ffd7d9a4593902dc385aa012ae6","parentId":"fld_2241da2766924de6be07581ec9a807d0","modified":1611176033851,"created":1611176033851,"url":"{{order-itegration-host}}/checkout/sell-out?country=PE","name":"1 - Order Integration - Sell Out","description":"","method":"POST","body":{"params":[{"value":"<shop paper=\"/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/\"\n      flipbookcompleteurl=\"https://viewer.ipaper.io/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/\"\n      exportorigin=\"https://viewer.ipaper.io/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/?page=14\"\n      orderId=\"z7WQxR\" orderDate=\"2020-10-23T17:13:46Z\">\n    <item>\n        <amount><![CDATA[1]]></amount>\n        <productid><![CDATA[73688]]></productid>\n        <price><![CDATA[86.3]]></price>\n        <name><![CDATA[eau de toilette masculino químicas de humor]]></name>\n        <description><![CDATA[75 ml]]></description>\n    </item>\n    <item>\n        <amount><![CDATA[1]]></amount>\n        <productid><![CDATA[30155]]></productid>\n        <price><![CDATA[3.0]]></price>\n        <name><![CDATA[KAIAK AMOS SACHET CLASS MASC]]></name>\n        <description><![CDATA[3UN 1ML]]></description>\n    </item>\n</shop>","name":"basket","disabled":false}],"mimeType":"application/x-www-form-urlencoded"},"parameters":[],"headers":[{"name":"authority","value":"conversao-apigw.dev.naturacloud.com"},{"name":"cache-control","value":"max-age=0"},{"name":"upgrade-insecure-requests","value":"1"},{"name":"origin","value":"https://viewer.ipaper.io"},{"name":"content-type","value":"application/x-www-form-urlencoded"},{"name":"user-agent","value":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"},{"name":"accept","value":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"},{"name":"sec-fetch-site","value":"cross-site"},{"name":"sec-fetch-mode","value":"navigate"},{"name":"sec-fetch-user","value":"?1"},{"name":"sec-fetch-dest","value":"document"},{"name":"referer","value":"https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/ShopCheckoutRedirect.ashx"},{"name":"accept-language","value":"en-US,en;q=0.9,fr;q=0.8,fr-CA;q=0.7,pt;q=0.6,es;q=0.5"},{"name":"Cookie","value":"user=y3v63u6sc2"}],"authentication":{},"metaSortKey":-1611176033851,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_2241da2766924de6be07581ec9a807d0","parentId":"fld_9cccc0f8e1064327ab21b86cb85d4538","modified":1611176033852,"created":1611176033852,"name":"1 - Happy-path","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1611176033852,"_type":"request_group"},{"_id":"fld_9cccc0f8e1064327ab21b86cb85d4538","parentId":"wrk_cf5a03d1a2b244e49cd9c8b2db1e0b6f","modified":1611176036584,"created":1611176036584,"name":"Checkout GSP","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1611176036584,"_type":"request_group"},{"_id":"wrk_cf5a03d1a2b244e49cd9c8b2db1e0b6f","parentId":null,"modified":1611175943411,"created":1611175943411,"name":"Natura - Squad Conversão","description":"","scope":null,"_type":"workspace"},{"_id":"req_d098e7bc3a654cdba233e00001fb0b3e","parentId":"fld_2241da2766924de6be07581ec9a807d0","modified":1611176033849,"created":1611176033849,"url":"{{bff-host}}/sell-out-carts/d568eb2e-6d6c-4ee4-a3ef-d66ec729cf30","name":"2 - Bff-Patch-Consultant-SellOut","description":"","method":"PATCH","body":{"mimeType":"","text":"{\n    \"consultant\": {\n        \"id\":2540695\n    }\n}"},"parameters":[],"headers":[{"name":"accept","value":"application/json"},{"name":"Content-Type","value":"application/json"}],"authentication":{},"metaSortKey":-1611176033849,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_3f37886fcda8473f896a05d25e5115ef","parentId":"fld_2241da2766924de6be07581ec9a807d0","modified":1611176033848,"created":1611176033848,"url":"{{sso-auth-path}}","name":"3 - Sso Login","description":"","method":"POST","body":{"params":[{"value":"password","name":"grant_type","disabled":false},{"value":"gsp-frontend","name":"client_id","disabled":false},{"value":"f6412823-9763-4955-802a-cafc7d29b29a","name":"client_secret","disabled":false},{"value":"{{user}}","name":"username","disabled":false},{"value":"{{password}}","name":"password","disabled":false}],"mimeType":"application/x-www-form-urlencoded"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/x-www-form-urlencoded"}],"authentication":{},"metaSortKey":-1611176033848,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_02f9f24a8a6c4b349045c2d1a06ead56","parentId":"fld_2241da2766924de6be07581ec9a807d0","modified":1611176033847,"created":1611176033847,"url":"{{bff-host}}/sell-out-carts/{{cartUuid}}/checkout","name":"4 - Bff-Post-Checkout","description":"","method":"POST","body":{},"parameters":[],"headers":[{"name":"accept","value":"application/json"},{"name":"Authorization-Provider","value":"RHSSO"},{"name":"Consultant-Token","value":"{{jwt-consultant-token}}"}],"authentication":{},"metaSortKey":-1611176033847,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e83d4dcd5d6941d2bee1b3ec3d882f96","parentId":"fld_e1014f873dc4417c8f78e3e30a44eeff","modified":1611176033844,"created":1611176033844,"url":"{{gsp-host}}/profile/v1/person-data","name":"1 - Profile - Person Data","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{"type":"bearer","disabled":false,"token":"{{sso-access-token}}","prefix":""},"metaSortKey":-1611176033844,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_e1014f873dc4417c8f78e3e30a44eeff","parentId":"fld_9cccc0f8e1064327ab21b86cb85d4538","modified":1611176033845,"created":1611176033845,"name":"2 - Validação GSP","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1611176033845,"_type":"request_group"},{"_id":"req_c76a398bf7cb4c4c8650c36463c2e79c","parentId":"fld_e1014f873dc4417c8f78e3e30a44eeff","modified":1611176033843,"created":1611176033843,"url":"{{gsp-host}}/profile/v1/commercial-info?businessModelId=1&channelId=1&systemId=1","name":"2 - Profile - Commercial-info","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"cache-control","value":"no-cache"},{"name":"x-app-token","value":"{{person-data-x-app-token}}"}],"authentication":{"type":"bearer","disabled":false,"token":"{{sso-access-token}}","prefix":""},"metaSortKey":-1611176033843,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_da5b9559352149ce9a2619b6c52af057","parentId":"fld_e1014f873dc4417c8f78e3e30a44eeff","modified":1611176033841,"created":1611176033841,"url":"{{gsp-host}}/cart/v1/cart/mine","name":"GSP - Cart Mine","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"accept","value":"application/json"},{"name":"x-app-token","value":"{{commercial-info-x-app-token}}"}],"authentication":{"type":"bearer","disabled":false,"token":"{{sso-access-token}}","prefix":""},"metaSortKey":-1611176033841,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_235df193bbd34916bbb5a87ba7445b63","parentId":"fld_e1014f873dc4417c8f78e3e30a44eeff","modified":1611176033840,"created":1611176033840,"url":"{{gsp-host}}/cart/v1/cart/{{gsp-cart-uuid}}","name":"GSP - Get cart by id","description":"","method":"GET","body":{},"parameters":[],"headers":[{"name":"accept","value":"application/json"},{"name":"x-app-token","value":"{{commercial-info-x-app-token}}"}],"authentication":{"type":"bearer","disabled":false,"token":"{{sso-access-token}}","prefix":""},"metaSortKey":-1611176033840,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_657f3daacdd74204ab26dd43a670e113","parentId":"fld_e1014f873dc4417c8f78e3e30a44eeff","modified":1611176033838,"created":1611176033838,"url":"{{gsp-host}}/cart/v1/cart/{{gsp-cart-uuid}}","name":"Delete Cart","description":"","method":"DELETE","body":{},"parameters":[],"headers":[{"name":"accept","value":"application/json"},{"name":"x-app-token","value":"{{commercial-info-x-app-token}}"}],"authentication":{"type":"bearer","disabled":false,"token":"{{sso-access-token}}","prefix":""},"metaSortKey":-1611176033838,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_adea13460507be5b79479e49afc02072efaff37a","parentId":"wrk_cf5a03d1a2b244e49cd9c8b2db1e0b6f","modified":1611175943474,"created":1611175943474,"name":"Base Environment","data":{},"dataPropertyOrder":null,"color":null,"isPrivate":false,"metaSortKey":1611175943474,"_type":"environment"},{"_id":"jar_adea13460507be5b79479e49afc02072efaff37a","parentId":"wrk_cf5a03d1a2b244e49cd9c8b2db1e0b6f","modified":1611175943475,"created":1611175943475,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_0ab0b3b3bf8a4e8f9b1fcf36f70db74e","parentId":"wrk_cf5a03d1a2b244e49cd9c8b2db1e0b6f","modified":1611175943421,"created":1611175943421,"fileName":"Natura - Squad Conversão","contents":"","contentType":"yaml","_type":"api_spec"}]}
+{
+	"info": {
+		"_postman_id": "bfc7469c-9738-4fa2-a0f0-9f9d17c6ae18",
+		"name": "Natura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "App-Notebook",
+			"item": [
+				{
+					"name": "GetOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"magazineOrderId\": \"NjPY7X\",\n        \"products\": [\n            {\n                \"sku\": \"22557\",\n                \"name\": \"Eau de toilette masculino Kaiak Aventura\",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"sku\": \"90916\",\n                \"name\": \"Eau de toillete masculino Kaiak aero\",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"sku\": \"7720\",\n                \"name\": \"Alcohol en gel Natura \",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            }\n        ],\n        \"cycle\": \"202010\",\n        \"brand\": \"NATURA\",\n        \"country\": \"BR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://conversao-apigw.dev.naturacloud.com/notebook-backend/carts",
+							"protocol": "https",
+							"host": [
+								"conversao-apigw",
+								"dev",
+								"naturacloud",
+								"com"
+							],
+							"path": [
+								"notebook-backend",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cart - Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"magazineOrderId\": \"NjPY7X\",\n        \"products\": [\n            {\n                \"sku\": \"22557\",\n                \"name\": \"Eau de toilette masculino Kaiak Aventura\",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"sku\": \"90916\",\n                \"name\": \"Eau de toillete masculino Kaiak aero\",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            },\n            {\n                \"sku\": \"7720\",\n                \"name\": \"Alcohol en gel Natura \",\n                \"magazineAmount\": 1,\n                \"magazinePrice\": 1,\n                \"description\": \"\"\n            }\n        ],\n        \"cycle\": \"202010\",\n        \"brand\": \"NATURA\",\n        \"country\": \"BR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/notebook-backend/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notebook-backend",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJraWQiOiJvY3B3UWtJNUU0a3h3SkxmcDRuU2I4T2VcL3BCUlVBdkdDYW55dE54cmZzND0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyMzRrNGpxMTVjNDgwbzN0NnNodTJrMTJhMSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiY29udmVyc2FvLW9yZGVyLWludGVncmF0aW9uLWRldlwvKiIsImF1dGhfdGltZSI6MTYwNDkzMDE4NiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfSXFkZmlobUltIiwiZXhwIjoxNjA0OTMzNzg2LCJpYXQiOjE2MDQ5MzAxODYsInZlcnNpb24iOjIsImp0aSI6IjgxNDcxZDYwLWQ5NjMtNDZlMy1hYTdmLWM4YTFkMTA5MDhhZiIsImNsaWVudF9pZCI6IjIzNGs0anExNWM0ODBvM3Q2c2h1MmsxMmExIn0.VarCw1Bku9OKSFIhaio-RqmVwfEIqLhqX5xIvJW7owaAWnOevVkwUzlFIhUYJRW3B4dD93rLO9E93GjJQif3lPldFMuhmLU3Faz8aeU1qJn4riaB7-beNwWylqM7oCgKG5heoIdTx7f8m8ZU0BEa8dkuMHETRMa2edm5ZQv7Nqa4DzCCLk7OkOqGs1fgmJBfDUs1TRAhp7eYcOBQPRNi6WsruOodoyIOkwwWCqL4-aUVi2G0NMqmU0Gx4qkLO_1Dlrzx9iTqNCxJg_Cs4bHWX-hHlirQ1NvcKgLx6Ktkbq0WvTya21ir0xkV0yj1S2JzU7isLSjAjmwna9K1_uRm6A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Consultant-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMURUVDM3N05LNENNWVJYSk5YMFFGQVBHSCIsInVzZXJfbmFtZSI6IjEyMjI3MTI2Nzk1Iiwic3RvcmFnZV9pZCI6IjEyMjI3MTI2Nzk1LTAxRFRUMzc3Tks0Q01ZUlhKTlgwUUZBUEdIIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm9yZ2FuaXphdGlvbiI6IkM2QmFuayIsImV4cCI6MTU3NDk4MzExMywiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjAxRFRUMzc4VlNQV1FKVDVLM0M5S1JXTUZKIiwiY2xpZW50X2lkIjoibW9iaWxlLWJmZiIsInBlcnNvbl9pZCI6IiJ9.zM2QHMFQRZTq_BBPSh5ZXdlugSmiVkmbnBvrK4Eg8CU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"id\": 182684938, \n    \"level\": 6,  \n    \"salesManagement\": 103\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/carts/4f67446b-8ec3-4b49-afcb-f905a3b52e4a/consultant",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carts",
+								"4f67446b-8ec3-4b49-afcb-f905a3b52e4a",
+								"consultant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateOrder Sell Out",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Consultant-Token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMURUVDM3N05LNENNWVJYSk5YMFFGQVBHSCIsInVzZXJfbmFtZSI6IjEyMjI3MTI2Nzk1Iiwic3RvcmFnZV9pZCI6IjEyMjI3MTI2Nzk1LTAxRFRUMzc3Tks0Q01ZUlhKTlgwUUZBUEdIIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm9yZ2FuaXphdGlvbiI6IkM2QmFuayIsImV4cCI6MTU3NDk4MzExMywiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjAxRFRUMzc4VlNQV1FKVDVLM0M5S1JXTUZKIiwiY2xpZW50X2lkIjoibW9iaWxlLWJmZiIsInBlcnNvbl9pZCI6IiJ9.zM2QHMFQRZTq_BBPSh5ZXdlugSmiVkmbnBvrK4Eg8CU",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"id\": 182684938\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/dev/notebook-backend/carts/158af436-d136-43ca-abef-5e2835d4da2e/consultant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"dev",
+								"notebook-backend",
+								"carts",
+								"158af436-d136-43ca-abef-5e2835d4da2e",
+								"consultant"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bff-notebook",
+			"item": [
+				{
+					"name": "Post Checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "consultant-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJPQU1BdXRobkNvb2tpZV9wZWRpZG9zaG1sMy5uYXR1cmEubmV0OjQ0MyI6IkclMkZ3d0hacGQ2RjdHdUFUbDFpN2NBJTJGWTE5QlprWldVJTJGSEFLJTJCSVBkU0pqMXp2UmJQNDlWSnNhYmpBaTR6bVByeW9MeEJ5UERiMDIwSXd2ZTJZbVNoS1Z3RzI1ZkVMYSUyQnVDJTJGM3hEcFlTS29DdVV1eHdQN2lzV1FSeXZwU2VsU0ExJTJGcHc4T2tzWndwMGFkYTBXV2JxZnRuWEFQZSUyRlpZaGgxS0hZekdUVjdNQVBiMlQweU5vUmVLUyUyRko4VWVlV0JjazBWWlVBMGhITEpMV3IlMkZMMnptekpaR1h5QWhHbTZtWEZmdSUyQmNNNyUyRiUyQkVUTzZkV1BVaWNXWUdOd1N6TThmcDRRVk5kYWZIUlU0UXN6SHhDY1J4aGgwVUEzOW9zbnpVdzRoTFlyME1JJTJGVk1qUGglMkJFMk9VQnRJYk9BejZKYnpkaUJ5alFqN2hJZE1qcSUyRiUyQnZDVFV3MDV1ZktWVDlCWmVKcG5WTmp5NlB6eVRrVVZpcGU3ZjFlcGYlMkZ3TGlxOFRBSUJiMnRaVDFnTmJoUkE0enMzN3NtY1lzVjNPZ2MxJTJGTzhNWWRsNHV3b0VIdk5OZ01PemJHVHNUMjhIbmw5Z3NWNFVtbmJ6djBIY3BaWWhiUmd6VWZSeEVXSzFQOGNpWGtNVm9OT2VndkJGNldYQ1d6YVBZVW1KN2o4RTRCcHVQY1JQMUpsUVRMd3VwaEZHRUwwNTRyUGVMU3Q0emtnSXlFUFREbk5sRiUyQld5ZFBjWGlIRndVYzVEMElFWE8lMkIlMkJRR3lmbyUyQmFXUTVJY1JmQ2k5OXVtQlBycWRab0NucG9na0tybkh6S1NOQXolMkYlMkJXVHJpTSUzRCJ9.8lTSzJaHxJe-nXPFKnHYKS9FPjnM-QdZeYH-3X6k3SI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id\":\"123234\",\n   \"level\":2,\n   \"salesManagement\":25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/event-carts/b30bfe9f-2b83-4451-93af-4c4dcd3ee531/checkout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"event-carts",
+								"b30bfe9f-2b83-4451-93af-4c4dcd3ee531",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bff -Patch-Consultant-Sellin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "consultant-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMURUVDM3N05LNENNWVJYSk5YMFFGQVBHSCIsInVzZXJfbmFtZSI6IjEyMjI3MTI2Nzk1Iiwic3RvcmFnZV9pZCI6IjEyMjI3MTI2Nzk1LTAxRFRUMzc3Tks0Q01ZUlhKTlgwUUZBUEdIIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm9yZ2FuaXphdGlvbiI6IkM2QmFuayIsImV4cCI6MTU3NDk4MzExMywiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjAxRFRUMzc4VlNQV1FKVDVLM0M5S1JXTUZKIiwiY2xpZW50X2lkIjoibW9iaWxlLWJmZiIsInBlcnNvbl9pZCI6IiJ9.zM2QHMFQRZTq_BBPSh5ZXdlugSmiVkmbnBvrK4Eg8CU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"consultant\": {\n     \"id\":196621267,\n     \"level\":2,\n     \"salesManagement\":3\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/event-carts/11ed502e-fa24-4809-880b-3749600728ce",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"event-carts",
+								"11ed502e-fa24-4809-880b-3749600728ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Health-check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bff-Patch-Consultant-SellOut",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Consultant-Token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization-Provider",
+								"value": "RHSSO",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consultant\": {\n        \"id\":2540695\n    }\n}"
+						},
+						"url": {
+							"raw": "{{host}}/sell-out-carts/6bea1411-b22c-440c-acd3-8766345d4a12",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sell-out-carts",
+								"6bea1411-b22c-440c-acd3-8766345d4a12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bff-Post-Checkout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization-Provider",
+								"value": "RHSSO"
+							},
+							{
+								"key": "Consultant-Token",
+								"value": "{{global_access_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/sell-out-carts/6d0f4046-7b28-4668-b90b-a775daca7a5f/checkout",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sell-out-carts",
+								"6d0f4046-7b28-4668-b90b-a775daca7a5f",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "order-integration",
+			"item": [
+				{
+					"name": "Checkout sell-in",
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "conversao-apigw.dev.naturacloud.com"
+							},
+							{
+								"key": "cache-control",
+								"value": "max-age=0"
+							},
+							{
+								"key": "upgrade-insecure-requests",
+								"value": "1"
+							},
+							{
+								"key": "origin",
+								"value": "https://viewer.ipaper.io"
+							},
+							{
+								"key": "content-type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+							},
+							{
+								"key": "accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "navigate"
+							},
+							{
+								"key": "sec-fetch-user",
+								"value": "?1"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "document"
+							},
+							{
+								"key": "referer",
+								"value": "https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/ShopCheckoutRedirect.ashx"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr;q=0.8,fr-CA;q=0.7,pt;q=0.6,es;q=0.5"
+							},
+							{
+								"key": "Cookie",
+								"value": "user=y3v63u6sc2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "basket",
+									"value": "<shop paper=\"/natura-cosmeticos-development/spc/natura/nat/bra/2020/17capoeira/pt-br/consultoria/17-brasil/\"\n      flipbookcompleteurl=\"https://viewer.ipaper.io/natura-cosmeticos-development/spc/natura/nat/bra/2020/17capoeira/pt-br/consultoria/17-brasil/\"\n      exportorigin=\"https://viewer.ipaper.io/natura-cosmeticos-development/spc/natura/nat/bra/2020/17capoeira/pt-br/consultoria/17-brasil/?page=8\"\n      orderId=\"pW2KYg\" orderDate=\"2020-09-01T16:16:58Z\">\n  <item>\n    <amount><![CDATA[1]]></amount>\n    <productid><![CDATA[7720]]></productid>\n    <price><![CDATA[7200]]></price>\n    <name><![CDATA[Alcohol en gel Natura ]]></name>\n    <description></description>\n  </item>\n  <item>\n    <amount><![CDATA[3]]></amount>\n    <productid><![CDATA[69062]]></productid>\n    <price><![CDATA[183]]></price>\n    <name><![CDATA[K eau de parfum masculino ]]></name>\n    <description><![CDATA[100 ml]]></description>\n  </item>\n  <item>\n    <amount><![CDATA[2]]></amount>\n    <productid><![CDATA[96416]]></productid>\n    <price><![CDATA[69]]></price>\n    <name><![CDATA[Regalo Ekos copaíba ]]></name>\n    <description><![CDATA[]]></description>\n  </item>\n</shop>\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/checkout/sell-in?country=BR",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"checkout",
+								"sell-in"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "BR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checkout sell-out",
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "conversao-apigw.dev.naturacloud.com"
+							},
+							{
+								"key": "cache-control",
+								"value": "max-age=0"
+							},
+							{
+								"key": "upgrade-insecure-requests",
+								"value": "1"
+							},
+							{
+								"key": "origin",
+								"value": "https://viewer.ipaper.io"
+							},
+							{
+								"key": "content-type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+							},
+							{
+								"key": "accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "navigate"
+							},
+							{
+								"key": "sec-fetch-user",
+								"value": "?1"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "document"
+							},
+							{
+								"key": "referer",
+								"value": "https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/ShopCheckoutRedirect.ashx"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr;q=0.8,fr-CA;q=0.7,pt;q=0.6,es;q=0.5"
+							},
+							{
+								"key": "Cookie",
+								"value": "user=y3v63u6sc2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "basket",
+									"value": "<shop paper=\"/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/\" flipbookcompleteurl=\"https://viewer.ipaper.io/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/\" exportorigin=\"https://viewer.ipaper.io/natura-cosmeticos-development/per/2020/15/es-pe/consultoria/ciclo-15/?page=16\" orderId=\"kDZbxD\" orderDate=\"2021-01-04T21:27:49Z\"><item><amount><![CDATA[1]]></amount><productid><![CDATA[91337]]></productid><price><![CDATA[94]]></price><name><![CDATA[eau de toilette masculino ]]></name><description><![CDATA[100 ml]]></description></item><item><amount><![CDATA[1]]></amount><productid><![CDATA[64750]]></productid><price><![CDATA[115]]></price><name><![CDATA[eau de toilette masculino paz y humor]]></name><description><![CDATA[75 ml]]></description></item><item><amount><![CDATA[1]]></amount><productid><![CDATA[64748]]></productid><price><![CDATA[86.3]]></price><name><![CDATA[eau de toilette masculino a dois ]]></name><description><![CDATA[75 ml]]></description></item><item><amount><![CDATA[1]]></amount><productid><![CDATA[186]]></productid><price><![CDATA[129.5]]></price><name><![CDATA[eau de parfum masculino cor.agio]]></name><description><![CDATA[100 ml]]></description></item></shop>",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/checkout/sell-out?country=PE",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"checkout",
+								"sell-out"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "PE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Health check",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "conversao-apigw.dev.naturacloud.com"
+							},
+							{
+								"key": "cache-control",
+								"value": "max-age=0"
+							},
+							{
+								"key": "upgrade-insecure-requests",
+								"value": "1"
+							},
+							{
+								"key": "origin",
+								"value": "https://viewer.ipaper.io"
+							},
+							{
+								"key": "content-type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+							},
+							{
+								"key": "accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "navigate"
+							},
+							{
+								"key": "sec-fetch-user",
+								"value": "?1"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "document"
+							},
+							{
+								"key": "referer",
+								"value": "https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/ShopCheckoutRedirect.ashx"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-US,en;q=0.9,fr;q=0.8,fr-CA;q=0.7,pt;q=0.6,es;q=0.5"
+							},
+							{
+								"key": "Cookie",
+								"value": "user=y3v63u6sc2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "basket",
+									"value": "<shop paper=\"/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/\" flipbookcompleteurl=\"https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/\" exportorigin=\"https://viewer.ipaper.io/natura-cosmeticos-development/bra/2020/15brasil/pt-br/revista/ciclo-15/?page=4\" orderId=\"pW2KYg\" orderDate=\"2020-09-01T16:16:58Z\"><item><amount><![CDATA[1]]></amount><productid><![CDATA[7720]]></productid><price><![CDATA[7200]]></price><name><![CDATA[Alcohol en gel Natura ]]></name><description></description></item></shop>",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://conversao-apigw.dev.naturacloud.com/order-integration/health",
+							"protocol": "https",
+							"host": [
+								"conversao-apigw",
+								"dev",
+								"naturacloud",
+								"com"
+							],
+							"path": [
+								"order-integration",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "mini-checkout",
+			"item": [
+				{
+					"name": "Mutarion Simple checkout",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Basic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"value": "BR",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\n    checkout(\n      order: {\n        brand: NATURA\n        status: DRAFT\n        createTime: \"2020-06-22T11:42:42.123\"\n        cycle: \"C012020\"\n        consultantId: \"1234\"\n        customer: {name: \"Rita\", acceptedTerms: true, acceptedMarketing: true}\n        products: [\n          { sku: \"123456\", name: \"Sabonete teste\", amount: 1, price: 79.91, description: \"300 ml\" },\n          { sku: \"987654\", name: \"Presente natura teste\", amount: 2, price: 129.93 }\n          { sku: \"45677\", name: \"Todo dia\", amount: 2, price: 129.93 }\n        ]\n      }\n    ) {\n      id\n      brand\n      createTime\n      status\n      total\n      cycle\n      country\n      consultantId\n      updateTime\n      customer{\n        id\n        name\n        acceptedTerms\n        acceptedMarketing\n      }\n      products {\n        sku\n        name\n        amount\n        price\n        description\n      }\n    }\n  }",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://conversao-apigw.dev.naturacloud.com/consultants-conversion-backend/graphql",
+							"protocol": "https",
+							"host": [
+								"conversao-apigw",
+								"dev",
+								"naturacloud",
+								"com"
+							],
+							"path": [
+								"consultants-conversion-backend",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query customer",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Basic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"type": "text",
+								"value": "BR"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query customer {\n    customer(customerId: \"c42fabe1-94c0-4077-90b1-90659765045a\") {\n        id\n        name\n        email\n        document\n        \n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://conversao-apigw.dev.naturacloud.com/consultants-conversion-backend/graphql",
+							"protocol": "https",
+							"host": [
+								"conversao-apigw",
+								"dev",
+								"naturacloud",
+								"com"
+							],
+							"path": [
+								"consultants-conversion-backend",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query order",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Basic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"type": "text",
+								"value": "BR"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query order {\n    order(orderId: \"1a194232-66b5-475d-9b48-2e74a6896363\") {\n        brand\n        date\n        customer{\n            name\n            email\n            \n        }\n        products {\n            name\n            amount\n            price\n        }\n    }\n}\n",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "https://conversao-apigw.dev.naturacloud.com/consultants-conversion-backend/graphql",
+							"protocol": "https",
+							"host": [
+								"conversao-apigw",
+								"dev",
+								"naturacloud",
+								"com"
+							],
+							"path": [
+								"consultants-conversion-backend",
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutarion Simple checkout Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Basic",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Country",
+								"value": "BR",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\"query\":\"query order ($orderId: String!) {\\n  order(orderId: $orderId) {\\n    id\\n    brand\\n    date\\n    cycle\\n    country\\n    consultantId\\n    total\\n    customer {\\n      id\\n      name\\n      email\\n      document\\n    }\\n    products {\\n      id\\n      name\\n      price\\n      amount\\n    }\\n  }\\n}\",\"variables\":{\"orderId\":\"39fcf390-c949-4d3e-b673-3edee4d5b528\"}}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cognito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic NTVzZDdqNzJsMjRtNTdpY3E4dXFjdXVtdmk6MWxidG5pdXJpZWR2bWgxcjhpYnE5ZmpxbWlsdHF1M203ZTF2b3JwNWtkaG80cGM0YWg1cw==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://fs-natura-dev.auth.us-east-1.amazoncognito.com/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"fs-natura-dev",
+						"auth",
+						"us-east-1",
+						"amazoncognito",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teste notebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saga test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
